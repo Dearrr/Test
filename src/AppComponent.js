@@ -40,9 +40,13 @@ export const NavLink = styled(Link)`
   text-decoration: none;
   /* Second Nav */
   margin-left: 24px;
+  &:active{
+    color: #8ad55d;
+  }
   &:hover {
     transition: all 0.2s ease-in-out;
     /* background: #fff; */
-    color: #808080;
+    color: #8ad55d;
+
   }
 `;
