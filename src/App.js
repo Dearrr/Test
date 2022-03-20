@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import { Home } from "./pages/Home/Home";
+import { Pokemon } from "./pages/Pokemon/Pokemon";
+import { Function1 } from "./pages/Function1";
+import { Function2 } from "./pages/Function2/Function2";
+import { Function3 } from "./pages/Function3/Function3";
+import { Menu } from "./pages/Menu";
+import { Header, HeaderText } from "./AppComponent";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header>
+        <HeaderText>Test Frontend</HeaderText>
+      </Header>
+
+      <Menu></Menu>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="pokemon" element={<Pokemon />}></Route>
+        <Route path="function1" element={<Function1 />}></Route>
+        <Route path="function2" element={<Function2 />}></Route>
+        <Route path="function3" element={<Function3 />}></Route>
+      </Routes>
     </div>
   );
 }
